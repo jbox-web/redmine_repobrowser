@@ -1,0 +1,21 @@
+<head>
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<script type="text/javascript" src="javascripts/jquery.easing.js"></script>
+<script type="text/javascript" src="javascripts/jqueryFileTree.js"></script>
+<link rel="stylesheet" href="stylesheets/jqueryFileTree.css" type="text/css"/>
+</head>
+<body>
+<div id="fileTree" class="demo"></div>
+</body>
+<script type="text/javascript">
+    $(document).ready( function() {
+        $('#fileTree').fileTree({ root: '', script: 'jqueryfiletree/content' }, function(file) {
+	if (file.indexOf(" ") != -1) {
+		file = '\"' + file + '\"'
+	}
+	window.parent.wikiToolbar.encloseLineSelection('source:'+file+'\n','');
+	window.parent.$dialog.dialog('close');
+        });
+    });
+	
+</script>
