@@ -2,7 +2,6 @@
 # See: http://guides.rubyonrails.org/routing.html
 get 'show', :to => 'show#index'
 
-  RedmineApp::Application.routes.draw do
+RedmineApp::Application.routes.draw do
     match 'jqueryfiletree/content', :to => 'jqueryfiletree#content', :via => [:get, :post]
 end
-#post 'jqueryfiletree/content', :to => 'jqueryfiletree#content'
