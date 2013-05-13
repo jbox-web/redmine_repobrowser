@@ -1,32 +1,3 @@
-<head>
-
-<%= javascript_include_tag "jquery.js", :plugin => 'redmine_repobrowser' %>
-<%= javascript_include_tag "jquery.easing.js", :plugin => 'redmine_repobrowser' %>
-<%= javascript_include_tag "jqueryFileTree.js", :plugin => 'redmine_repobrowser' %>
-<%= stylesheet_link_tag "jqueryFileTree.css", :plugin => 'redmine_repobrowser' %>
-</head>
-<body>
-<div id="fileTree" class="demo"></div>
-</body>
-<script type="text/javascript">
-    $(document).ready( function() {
-        $('#fileTree').fileTree({ root: '', script: '/jqueryfiletree/content' }, function(file) {
-	if (file.indexOf(" ") != -1) {
-		file = '\"' + file + '\"'
-	}
-	window.parent.wikiToolbar.encloseLineSelection('source:'+file+'\n','');
-	window.parent.$dialog.dialog('close');
-        });
-    });
-</script>
-
-Id: <%= @project_id %>
-<style type="text/css">
-footer.hidden {visibility:hidden;}
-top-menu.hidden {visibility:hidden;}
-header.hidden {visibility:hidden;}
-</style>
-
 <ul class="jqueryFileTree" style="display: none;">
     <% @dir[0].each do |dir| %>
 	<li class="directory collapsed">
@@ -36,3 +7,4 @@ header.hidden {visibility:hidden;}
     <li class="file ext_<%=File.extname(file)[1..-1]%>"><a href="#" rel="<%=@parent+file %>"><%= file %></a></li>
     <% end %>
 </ul>
+

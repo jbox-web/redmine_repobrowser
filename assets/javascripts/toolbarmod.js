@@ -3,7 +3,7 @@ window.onload = function() {
 jsToolBar.prototype.elements.repo={
 	type:"button",title:"Add Repository link",fn:{wiki:function(){$(function() {
 	$dialog = $('<div></div>')
-               .html('<iframe style="border: 0px; " src="jqueryfiletree" %> width="100%" height="100%"></iframe>')
+               .html('<iframe style="border: 0px; " src="jqueryfiletree/show?dir="" width="100%" height="100%"></iframe>')
                .dialog({
                    autoOpen: false,
                    modal: false,

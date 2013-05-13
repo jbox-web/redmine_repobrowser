@@ -7,6 +7,10 @@ class JqueryfiletreeController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def show
+    render :layout => 'reduced'
+  end
+
   def content
     @parent = params[:dir]
     @project_id = @project.id
