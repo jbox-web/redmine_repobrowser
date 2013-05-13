@@ -14,6 +14,13 @@ jsToolBar.prototype.elements.repo={
                });
 $dialog.dialog('open');
 });}}}
+
+    //Move help to the end for optical readons
+    e = jsToolBar.prototype.elements
+    help = e.help
+    delete e.help
+    jsToolBar.prototype.elements.help = help
+
     // redraw toolbar to get the new buttons to show
     wikiToolbar.draw();
   }
