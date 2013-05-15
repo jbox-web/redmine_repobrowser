@@ -1,4 +1,4 @@
-## Repository browser, a Remine plugin
+## Repository browser, a Redmine plugin
 
 
 ### Short Description
