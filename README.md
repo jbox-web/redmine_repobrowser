@@ -7,10 +7,9 @@ When clicked, a popup dialog with the directory structure of the projects reposi
 Once you found the file you where looking for, a link (source:path/filename) is added into the editor textform.
 
 ### Installation
-
+Change to redmine/plugins folder
 ```bash
   git clone https://github.com/gilbertf/redmine_repobrowser.git
-  bundle install
 ```
 
 ### Screenshot
