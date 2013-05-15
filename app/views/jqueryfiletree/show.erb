@@ -11,7 +11,7 @@
 
 <script type="text/javascript">
     $(document).ready( function() {
-        $('#fileTree').fileTree({ root: '', script: "/repobrowser/<%= params[:project_id] %>/content?dir=<%= params[:dir]%>" }, function(file) {
+        $('#fileTree').fileTree({ root: '', script: "/repobrowser/<%= params[:project_id] %>/content" }, function(file) {
 	if (file.indexOf(" ") != -1) {
 		file = '\"' + file + '\"'
 	}
