@@ -8,3 +8,5 @@ Once you found the file you where looking for, a link (source:path/filename) is 
 
 === Installation
 As usual, copy the redmine_repobrowser directory to redmine/plugins.
+
+![redmine_sidebar_toc_pt](https://raw.github.com/gilbertf/redmine_screenshots/master/redmine_repobrowser.png)
