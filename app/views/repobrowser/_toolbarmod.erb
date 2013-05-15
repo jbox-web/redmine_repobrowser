@@ -1,15 +1,17 @@
+<% if !params[:project_id].nil? %>
+<%= raw "<script type=text/javascript>
 window.onload = function() {
-  if (typeof(jsToolBar) != "undefined") {
+  if (typeof(jsToolBar) != \"undefined\") {
 jsToolBar.prototype.elements.repo={
-	type:"button",title:"Add Repository link",fn:{wiki:function(){$(function() {
+	type:\"button\",title:\"Add Repository link\",fn:{wiki:function(){$(function() {
 	$dialog = $('<div></div>')
-               .html('<iframe style="border: 0px; " src="repobrowser" width="100%" height="100%"></iframe>')
+               .html('<iframe style=\"border: 0px;\" src=\"/repobrowser/" + params[:project_id] +  "/show?dir=\"\"\" width=\"100%\" height=\"100%\"></iframe>')
                .dialog({
                    autoOpen: false,
                    modal: false,
                    height: 400,
                    width: 300,
-                   title: "Repository browser",
+                   title: \"Repository browser\",
 		   resizable: true
                });
 $dialog.dialog('open');
@@ -25,3 +27,6 @@ $dialog.dialog('open');
     wikiToolbar.draw();
   }
 };
+</script>
+" %>
+<% end %>

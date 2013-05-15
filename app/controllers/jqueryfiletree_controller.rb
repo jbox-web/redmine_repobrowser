@@ -1,20 +1,15 @@
 class JqueryfiletreeController < ApplicationController
   protect_from_forgery :only => []
 
-  before_filter :find_project
-
-  def find_project
-    @project = Project.find(params[:id])
-  end
-
   def show
-    render :layout => 'reduced'
+	render :layout => 'reduced'
   end
 
   def content
+    @project = Project.find(params[:project_id])
     @parent = params[:dir]
-    @project_id = @project.id
-    @project = Project.find(@project_id)
+    @tmp_project_id = @project.id
+    @project = Project.find(@tmp_project_id)
     @repository = @project.repository
     if (@repository == nil)
       render :text => "There is no repository defined for this project"
