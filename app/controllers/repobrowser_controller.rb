@@ -1,4 +1,4 @@
-class JqueryfiletreeController < ApplicationController
+class RepobrowserController < ApplicationController
   protect_from_forgery :only => []
 
   def show
