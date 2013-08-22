@@ -1,8 +1,9 @@
 <head>
-<%= javascript_include_tag "jquery.js", :plugin => 'redmine_repobrowser' %>
-<%= javascript_include_tag "jquery.easing.js", :plugin => 'redmine_repobrowser' %>
-<%= javascript_include_tag "jqueryFileTree.js", :plugin => 'redmine_repobrowser' %>
-<%= stylesheet_link_tag "jqueryFileTree.css", :plugin => 'redmine_repobrowser' %>
+  <%= stylesheet_link_tag    "jqueryFileTree.css", :plugin => 'redmine_repobrowser' %>
+
+  <%= javascript_include_tag "jquery-1.8.3-ui-1.9.2-ujs-2.0.3.js" %>
+  <%= javascript_include_tag "jquery.easing.js",   :plugin => 'redmine_repobrowser' %>
+  <%= javascript_include_tag "jqueryFileTree.js",  :plugin => 'redmine_repobrowser' %>
 </head>
 
 <body>
@@ -10,13 +11,13 @@
 </body>
 
 <script type="text/javascript">
-    $(document).ready( function() {
-        $('#fileTree').fileTree({ root: '', script: "<%= url_for(:controller => 'repobrowser', :project_id => params[:project_id], :action => 'content') %>" }, function(file) {
-	if (file.indexOf(" ") != -1) {
-		file = '\"' + file + '\"'
-	}
-	window.parent.wikiToolbar.encloseSelection('source:'+file,'');
-	window.parent.$dialog.dialog('close');
-        });
+  $(document).ready( function() {
+    $('#fileTree').fileTree({ root: '', script: "<%= url_for(:controller => 'repobrowser', :project_id => params[:project_id], :action => 'content') %>" }, function(file) {
+      if (file.indexOf(" ") != -1) {
+        file = '\"' + file + '\"'
+      }
+      window.parent.wikiToolbar.encloseSelection('source:'+file,'');
+      window.parent.$dialog.dialog('close');
     });
+  });
 </script>
