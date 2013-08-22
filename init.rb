@@ -10,5 +10,5 @@ Redmine::Plugin.register :redmine_repobrowser do
   description 'Adds a button to the wiki that allows to graphically choose links to the projects repositories'
   version '1.2.0'
   author_url 'https://github.com/gilbertf/redmine_repobrowser'
-  url 'http://www.jbox-web.com'
+  url 'https://github.com/gilbertf/redmine_repobrowser'
 end
