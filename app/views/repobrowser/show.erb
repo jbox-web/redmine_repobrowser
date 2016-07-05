@@ -16,7 +16,7 @@
       if (file.indexOf(" ") != -1) {
         file = '\"' + file + '\"'
       }
-      window.parent.wikiToolbar.encloseSelection('source:'+file,'');
+      window.parent.wikiToolbar.encloseSelection('export:"'+file+'"','');
       window.parent.$dialog.dialog('close');
     });
   });
