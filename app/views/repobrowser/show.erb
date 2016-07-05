@@ -13,10 +13,8 @@
 <script type="text/javascript">
   $(document).ready( function() {
     $('#fileTree').fileTree({ root: '', script: "<%= url_for(:controller => 'repobrowser', :project_id => params[:project_id], :action => 'content') %>" }, function(file) {
-      if (file.indexOf(" ") != -1) {
-        file = '\"' + file + '\"'
-      }
-      window.parent.wikiToolbar.encloseSelection('export:"'+file+'"','');
+      file = '\"' + file + '\"'
+      window.parent.$dialog.data('wikiToolbar').encloseSelection('export:'+file,'');
       window.parent.$dialog.dialog('close');
     });
   });

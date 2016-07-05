@@ -5,6 +5,6 @@ end
 
 apply_patch do
   # Hooks
-  require_dependency 'redmine_repobrowser/hooks/add_plugin_css'
+  #require_dependency 'redmine_repobrowser/hooks/add_plugin_css'
   require_dependency 'redmine_repobrowser/hooks/add_plugin_render'
 end
