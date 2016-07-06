@@ -1,0 +1,6 @@
+{
+  "name": "Redmine repobrowser",
+  "tagline": " A Redmine plugin to add links to repositories's files in your Wiki pages, easy ;)",
+  "body": "## Repository browser\r\n\r\n[![GitHub license](https://img.shields.io/github/license/jbox-web/redmine_repobrowser.svg)](https://github.com/jbox-web/redmine_repobrowser/blob/devel/LICENSE)\r\n[![GitHub release](https://img.shields.io/github/release/jbox-web/redmine_repobrowser.svg)](https://github.com/jbox-web/redmine_repobrowser/releases/latest)\r\n[![Code Climate](https://codeclimate.com/github/jbox-web/redmine_repobrowser.png)](https://codeclimate.com/github/jbox-web/redmine_repobrowser)\r\n\r\n### Add links to repositories's files in your Wiki pages, easy ;)\r\n\r\nThis plugin adds a new button to the wiki editor.\r\nWhen clicked, a popup dialog with the directory structure of the projects repository is shown and can be browsed.\r\nOnce you found the file you where looking for, a link (`export:\"path/filename\"`) is added into the editor textform.\r\n\r\n## Installation\r\n\r\nChange to redmine/plugins folder and run:\r\n\r\n```bash\r\n  git clone https://github.com/tleish/redmine_jstoolbar_ext\r\n  git clone https://github.com/jbox-web/redmine_repobrowser.git\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
