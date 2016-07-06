@@ -8,10 +8,11 @@ class RepobrowserController < ApplicationController
 
   def content
     @project = Project.find(params[:project_id])
-    @parent = params[:dir]
+    @parent = URI.decode(params[:dir])
     @tmp_project_id = @project.id
     @project = Project.find(@tmp_project_id)
     @repository = @project.repository
+
     if (@repository == nil)
       render :text => "There is no repository defined for this project"
     else
