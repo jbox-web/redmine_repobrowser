@@ -3,7 +3,7 @@ if(typeof RedmineWikiToolbarExt === 'undefined') return false;
 
 var buttons = [
 	{
-		title: 'repo', after: 'help',
+		title: 'repo', after: 'space5',
 		fn: {
 			wiki:function() {
 				$dialog = $('#dialog_repo_browser').dialog({
