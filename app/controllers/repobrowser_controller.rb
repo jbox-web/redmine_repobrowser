@@ -12,17 +12,18 @@ class RepobrowserController < ApplicationController
     @parent     = URI.decode(params[:dir])
 
     if @repository.nil?
-      render text: "There is no repository defined for this project"
+      render text: 'There is no repository defined for this project'
     else
       @dirs  = []
       @files = []
 
       p = @parent
-      p.gsub!('%20',' ')
-      p.gsub!('\/\/','\/')
+      p.gsub!('%20', ' ')
+      p.gsub!('\/\/', '\/')
 
-      @entries = @repository.entries(path=p)
-      @entries.each do |entrie|
+      entries = @repository.entries(p)
+
+      entries.each do |entrie|
         r = entrie.path
         r = r.split('/').last
         if entrie.is_dir?
@@ -32,7 +33,7 @@ class RepobrowserController < ApplicationController
         end
       end
 
-      @dir = [@dirs, @files]
+      @entries = [@dirs, @files]
       render layout: 'reduced'
     end
   end
