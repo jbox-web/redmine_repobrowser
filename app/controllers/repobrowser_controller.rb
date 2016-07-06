@@ -1,26 +1,26 @@
 class RepobrowserController < ApplicationController
 
-  protect_from_forgery :only => []
+  protect_from_forgery only: []
 
   def show
-    render :layout => 'reduced'
+    render layout: 'reduced'
   end
 
   def content
-    @project = Project.find(params[:project_id])
-    @parent = URI.decode(params[:dir])
-    @tmp_project_id = @project.id
-    @project = Project.find(@tmp_project_id)
+    @project    = Project.find(params[:project_id])
     @repository = @project.repository
+    @parent     = URI.decode(params[:dir])
 
-    if (@repository == nil)
-      render :text => "There is no repository defined for this project"
+    if @repository.nil?
+      render text: "There is no repository defined for this project"
     else
-      @dirs = []
+      @dirs  = []
       @files = []
+
       p = @parent
       p.gsub!('%20',' ')
       p.gsub!('\/\/','\/')
+
       @entries = @repository.entries(path=p)
       @entries.each do |entrie|
         r = entrie.path
@@ -31,8 +31,9 @@ class RepobrowserController < ApplicationController
           @files.push(r)
         end
       end
-      @dir = [@dirs,@files]
-      render :layout => 'reduced'
+
+      @dir = [@dirs, @files]
+      render layout: 'reduced'
     end
   end
 
