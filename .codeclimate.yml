@@ -42,3 +42,4 @@ ratings:
   - "**.py"
 exclude_paths:
 - config/
+- assets/javascripts/jquery-1.8.3-ui-1.9.2-ujs-2.0.3.js
