@@ -1,8 +1,6 @@
 ## Repository browser
 
 [![GitHub license](https://img.shields.io/github/license/jbox-web/redmine_repobrowser.svg)](https://github.com/jbox-web/redmine_repobrowser/blob/devel/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/jbox-web/redmine_repobrowser.svg)](https://github.com/jbox-web/redmine_repobrowser/releases/latest)
-[![Code Climate](https://codeclimate.com/github/jbox-web/redmine_repobrowser.png)](https://codeclimate.com/github/jbox-web/redmine_repobrowser)
 
 ### Add links to repositories's files in your Wiki pages, easy ;)
 
